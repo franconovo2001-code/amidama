@@ -5,7 +5,7 @@ date: 2026-06-05
 epoca: "Década de 1950"
 fotografo: "Copia de exhibición sin datos"
 excerpt: "Un fotograma sin acreditar y el trabajo de reponer, cuarenta años después, un nombre en los créditos."
-image: "/images/placeholders/paulina.jpeg"
+image: "src/images/placeholders/paulina.jpeg"
 ---
 
 Nota de ejemplo. Reemplazar por el texto real desde `/admin` o editando este archivo.
