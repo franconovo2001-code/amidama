@@ -442,7 +442,7 @@
 /* ---------- FEATURED STRIP (home) ---------- */
 .featured-strip{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2px;
   background: var(--line);
   border: 1px solid var(--line);
@@ -653,4 +653,8 @@
 .archivo-table tr:hover td{ color: var(--paper); background: var(--surface); }
 @media (max-width: 760px){
   .archivo-table{ display:block; overflow-x:auto; white-space:nowrap; }
+}
+
+@media (max-width: 860px){
+  .featured-strip{ grid-template-columns: 1fr; }
 }
