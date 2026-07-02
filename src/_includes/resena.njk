@@ -1,0 +1,37 @@
+---
+layout: base.njk
+---
+<section class="review-hero" data-reveal>
+  <div class="wrap">
+    <div class="review-hero-grid">
+      <div class="review-cover" style="{% if cover %}background-image:url('{{ cover }}');{% endif %}"></div>
+      <div class="review-meta-col">
+        <div class="hero-eyebrow">Reseña</div>
+        <h1 class="review-title">{{ title }}</h1>
+
+        <div class="rating-badge" title="Calificación: {{ rating }}">
+          <span class="rating-seg {% if (rating | ratingIndex) >= 1 %}on{% endif %}">Sombra</span>
+          <span class="rating-seg {% if (rating | ratingIndex) >= 2 %}on{% endif %}">Contraluz</span>
+          <span class="rating-seg {% if (rating | ratingIndex) >= 3 %}on{% endif %}">Luz</span>
+        </div>
+
+        <dl class="ficha-tecnica">
+          <div><dt>Director</dt><dd>{{ director }}</dd></div>
+          <div><dt>Dir. de fotografía</dt><dd>{{ dp }}</dd></div>
+          <div><dt>País</dt><dd>{{ pais }}</dd></div>
+          <div><dt>Año</dt><dd>{{ anio }}</dd></div>
+          {% if camara %}<div><dt>Cámara / formato</dt><dd>{{ camara }}</dd></div>{% endif %}
+        </dl>
+
+        <div class="hero-meta">{{ page.date | readableDate }} — {{ author or "Franco" }} · Lectura {{ readTime or "5′" }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <article class="post-body" data-reveal>
+    {{ content | safe }}
+  </article>
+  <p class="back-link"><a href="/resenas/">← Volver a reseñas</a></p>
+</main>

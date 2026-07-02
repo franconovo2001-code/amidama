@@ -1,0 +1,20 @@
+---
+layout: resena.njk
+title: "Ópera prima sin red de contención"
+date: 2026-06-27
+director: "Nombre Apellido"
+dp: "Nombre Apellido"
+pais: "Argentina"
+anio: 2025
+camara: "Digital, Super 35"
+rating: Luz
+excerpt: "Plano secuencia sostenido durante los primeros doce minutos sin corte."
+readTime: 5′
+author: Franco
+---
+
+Reseña de ejemplo. Reemplazar por texto real desde `/admin` o editando este archivo.
+
+## Cámara
+
+Análisis técnico del movimiento de cámara y la relación con el espacio narrativo.

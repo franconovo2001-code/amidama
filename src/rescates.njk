@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Rescates — Amidama
+permalink: /rescates/
+---
+<main class="wrap">
+  <div class="section-head" data-reveal>
+    <h2>Rescates</h2>
+    <span class="tc">{{ collections.rescates.length }} piezas de archivo</span>
+  </div>
+  <p class="section-intro">Archivo fotográfico de la época dorada del cine nacional. Material de exposición, no de consumo rápido.</p>
+
+  <div class="masonry">
+    {% for r in collections.rescates %}
+    <a class="masonry-item" href="{{ r.url }}" data-reveal>
+      <img src="{{ r.data.image }}" alt="{{ r.data.title }}" loading="lazy">
+      <span class="masonry-caption">{{ r.data.title }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</main>

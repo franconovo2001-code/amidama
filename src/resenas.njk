@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Reseñas — Amidama
+permalink: /resenas/
+---
+<main class="wrap">
+  <div class="section-head" data-reveal>
+    <h2>Reseñas</h2>
+    <span class="tc">{{ collections.resenas.length }} publicadas</span>
+  </div>
+  <p class="section-intro">Crítica técnica enfocada en cámara, óptica e iluminación. Sin relleno.</p>
+
+  <div class="contact-sheet">
+    <div class="strip">
+      {% for post in collections.resenas %}
+      <article class="frame" data-reveal>
+        <div class="sprockets"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="frame-still" data-tag="{{ post.data.pais }}" style="{% if post.data.cover %}background-image:url('{{ post.data.cover }}');background-size:cover;background-position:center;{% endif %}"></div>
+        <div class="frame-body">
+          <div class="frame-cat">{{ post.data.director }}{% if post.data.anio %} · {{ post.data.anio }}{% endif %}</div>
+          <h3 class="frame-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p class="frame-excerpt">{{ post.data.excerpt }}</p>
+          <div class="frame-foot">
+            <span class="mini-rating">{{ post.data.rating }}</span>
+            <span>{{ post.date | readableDate }}</span>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</main>

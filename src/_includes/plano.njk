@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<section class="plano-lightbox" data-reveal>
+  <div class="plano-image" style="{% if image %}background-image:url('{{ image }}');{% endif %}"></div>
+  <div class="plano-panel">
+    <div class="hero-eyebrow">El Plano del Día</div>
+    <h1 class="plano-title">{{ title }}</h1>
+    <div class="plano-meta">{{ pelicula }}{% if director %} — {{ director }}{% endif %}{% if anio %} ({{ anio }}){% endif %}</div>
+    <div class="post-body plano-text">
+      {{ content | safe }}
+    </div>
+    <div class="hero-meta">{{ page.date | readableDate }}</div>
+    <p class="back-link"><a href="/plano-del-dia/">← Volver a El Plano del Día</a></p>
+  </div>
+</section>

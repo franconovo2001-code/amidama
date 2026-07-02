@@ -6,21 +6,55 @@ media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "posts"
-    label: "Notas"
-    folder: "src/posts"
+  - name: "resenas"
+    label: "Reseñas"
+    folder: "src/resenas"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime" }
-      - label: "Categoría"
-        name: "category"
+      - { label: "Director", name: "director", widget: "string" }
+      - { label: "Director de fotografía", name: "dp", widget: "string" }
+      - { label: "País", name: "pais", widget: "string" }
+      - { label: "Año", name: "anio", widget: "number", value_type: "int" }
+      - { label: "Cámara / formato", name: "camara", widget: "string", required: false }
+      - label: "Calificación"
+        name: "rating"
         widget: "select"
-        options: ["Crítica", "Ensayos", "Rescates", "Fotografía"]
-      - { label: "Bajada / resumen (aparece en la tira de notas)", name: "excerpt", widget: "text" }
+        options: ["Luz", "Contraluz", "Sombra"]
+      - { label: "Bajada / resumen", name: "excerpt", widget: "text" }
       - { label: "Imagen de portada", name: "cover", widget: "image", required: false }
       - { label: "Tiempo de lectura", name: "readTime", widget: "string", default: "5′", required: false }
       - { label: "Autor", name: "author", widget: "string", default: "Franco" }
-      - { label: "Cuerpo de la nota", name: "body", widget: "markdown" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk" }
+      - { label: "Cuerpo de la reseña", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "resena.njk" }
+
+  - name: "planoDelDia"
+    label: "El Plano del Día"
+    folder: "src/plano-del-dia"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Película", name: "pelicula", widget: "string" }
+      - { label: "Director", name: "director", widget: "string", required: false }
+      - { label: "Año", name: "anio", widget: "number", value_type: "int", required: false }
+      - { label: "Imagen del fotograma", name: "image", widget: "image" }
+      - { label: "Análisis", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "plano.njk" }
+
+  - name: "rescates"
+    label: "Rescates"
+    folder: "src/rescates"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Época", name: "epoca", widget: "string" }
+      - { label: "Fotógrafo / procedencia", name: "fotografo", widget: "string", required: false }
+      - { label: "Imagen", name: "image", widget: "image" }
+      - { label: "Nota / ficha de procedencia", name: "body", widget: "markdown", required: false }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "rescate.njk" }

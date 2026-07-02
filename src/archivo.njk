@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: Archivo — Amidama
+description: Índice completo de reseñas de Amidama por director, director de fotografía y país.
+permalink: /archivo/
+---
+<main class="wrap">
+  <div class="section-head" data-reveal>
+    <h2>Archivo</h2>
+    <span class="tc">Índice por director, fotografía y país</span>
+  </div>
+  <p class="section-intro">Todas las reseñas publicadas, ordenadas por fecha, con su ficha técnica completa.</p>
+
+  <table class="archivo-table" data-reveal>
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Director</th>
+        <th>Dir. de fotografía</th>
+        <th>País</th>
+        <th>Año</th>
+        <th>Calificación</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in collections.resenas %}
+      <tr>
+        <td><a href="{{ post.url }}">{{ post.data.title }}</a></td>
+        <td>{{ post.data.director }}</td>
+        <td>{{ post.data.dp }}</td>
+        <td>{{ post.data.pais }}</td>
+        <td>{{ post.data.anio }}</td>
+        <td>{{ post.data.rating }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</main>

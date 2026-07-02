@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<main class="wrap">
+  <article class="rescate-detail" data-reveal>
+    <div class="hero-eyebrow">Rescates — Archivo</div>
+    <h1 class="review-title">{{ title }}</h1>
+    <div class="hero-meta">{{ epoca }}{% if fotografo %} — {{ fotografo }}{% endif %}</div>
+    <img class="rescate-full" src="{{ image }}" alt="{{ title }}">
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+    <p class="back-link"><a href="/rescates/">← Volver a Rescates</a></p>
+  </article>
+</main>

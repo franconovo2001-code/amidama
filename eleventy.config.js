@@ -1,10 +1,19 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("admin");
 
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/*.md").reverse();
+  eleventyConfig.addCollection("resenas", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/resenas/*.md").reverse();
+  });
+
+  eleventyConfig.addCollection("planoDelDia", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/plano-del-dia/*.md").reverse();
+  });
+
+  eleventyConfig.addCollection("rescates", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/rescates/*.md").reverse();
   });
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
@@ -13,6 +22,12 @@ module.exports = function (eleventyConfig) {
       month: "long",
       year: "numeric",
     });
+  });
+
+  // Texto y clase visual para el sistema de calificación Luz / Contraluz / Sombra
+  eleventyConfig.addFilter("ratingIndex", (rating) => {
+    const scale = { luz: 3, contraluz: 2, sombra: 1 };
+    return scale[(rating || "").toLowerCase()] || 0;
   });
 
   return {
