@@ -1,15 +1,23 @@
 ---
 layout: base.njk
 ---
-<main class="wrap">
-  <article class="rescate-detail" data-reveal>
-    <div class="hero-eyebrow">Rescates — Archivo</div>
-    <h1 class="review-title">{{ title }}</h1>
-    <div class="hero-meta">{{ epoca }}{% if fotografo %} — {{ fotografo }}{% endif %}</div>
-    <img class="rescate-full" src="{{ image }}" alt="{{ title }}">
-    <div class="post-body">
-      {{ content | safe }}
+<section class="review-hero" data-reveal>
+  <div class="wrap">
+    <div class="review-hero-grid">
+      <div class="review-cover" style="{% if image %}background-image:url('{{ image }}');background-size:cover;background-position:center;{% endif %}"></div>
+      <div class="review-meta-col">
+        <div class="hero-eyebrow">Rescates</div>
+        <h1 class="review-title">{{ title }}</h1>
+        <div class="tech-line">{{ epoca }}{% if fotografo %} · {{ fotografo }}{% endif %}</div>
+        <div class="hero-meta">{{ page.date | readableDate }}</div>
+      </div>
     </div>
-    <p class="back-link"><a href="/rescates/">← Volver a Rescates</a></p>
+  </div>
+</section>
+
+<main class="wrap">
+  <article class="post-body" data-reveal>
+    {{ content | safe }}
   </article>
+  <p class="back-link"><a href="/rescates/">← Volver a Rescates</a></p>
 </main>

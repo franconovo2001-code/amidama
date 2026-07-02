@@ -31,8 +31,8 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "resena.njk" }
 
   - name: "planoDelDia"
-    label: "El Plano del Día"
-    folder: "src/plano-del-dia"
+    label: "El Plano"
+    folder: "src/el-plano"
     create: true
     slug: "{{slug}}"
     fields:
@@ -55,6 +55,7 @@ collections:
       - { label: "Fecha", name: "date", widget: "datetime" }
       - { label: "Época", name: "epoca", widget: "string" }
       - { label: "Fotógrafo / procedencia", name: "fotografo", widget: "string", required: false }
+      - { label: "Bajada / resumen", name: "excerpt", widget: "text" }
       - { label: "Imagen", name: "image", widget: "image" }
-      - { label: "Nota / ficha de procedencia", name: "body", widget: "markdown", required: false }
+      - { label: "Nota", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "rescate.njk" }

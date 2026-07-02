@@ -1,10 +1,11 @@
 ---
 layout: rescate.njk
-title: "Set de rodaje, estudio porteño"
+title: "El estudio que filmó cien películas y nadie visita"
 date: 2026-06-10
 epoca: "Década de 1940"
-fotografo: "Fotógrafo sin identificar"
+fotografo: "Archivo particular"
+excerpt: "Un estudio porteño clave en la época de oro, hoy sin placa, sin visitas guiadas y casi sin mención en los libros de historia del cine."
 image: "/images/placeholders/rescate-2.svg"
 ---
 
-Pieza de archivo de ejemplo. Reemplazar por una imagen real y su ficha de procedencia desde `/admin`.
+Nota de ejemplo. Reemplazar por el texto real desde `/admin` o editando este archivo.

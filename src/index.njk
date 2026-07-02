@@ -16,7 +16,7 @@ title: Amidama — Análisis técnico y rescate de archivo
       <p class="hero-dek">Reseñas centradas en cámara, óptica e iluminación. Investigación de archivo del cine argentino. Nada de relleno ni de lenguaje inflado.</p>
       <div class="cta-row">
         <a class="btn" href="/resenas/">Explorar el archivo</a>
-        {% if latestPlano %}<a class="btn ghost" href="{{ latestPlano.url }}">Ver el plano del día</a>{% endif %}
+        {% if latestPlano %}<a class="btn ghost" href="{{ latestPlano.url }}">Ver el plano</a>{% endif %}
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@ title: Amidama — Análisis técnico y rescate de archivo
     {% endif %}
     {% if latestPlano %}
     <a class="featured-card" href="{{ latestPlano.url }}" style="{% if latestPlano.data.image %}background-image:linear-gradient(180deg, rgba(16,14,12,0.15), rgba(16,14,12,0.92)), url('{{ latestPlano.data.image }}');background-size:cover;background-position:center;{% endif %}">
-      <div class="fc-tag">El Plano del Día</div>
+      <div class="fc-tag">El Plano</div>
       <h3>{{ latestPlano.data.title }}</h3>
       <p>{{ latestPlano.data.pelicula }}</p>
     </a>
@@ -82,18 +82,25 @@ title: Amidama — Análisis técnico y rescate de archivo
   {% if previewRescates.length %}
   <div class="section-head" data-reveal>
     <h2>Rescates</h2>
-    <span class="tc">Archivo fotográfico</span>
+    <span class="tc">Cine y memoria</span>
   </div>
-  <p class="section-intro">Material de la época dorada del cine nacional, tratado como pieza de exposición.</p>
-  <div class="masonry" data-reveal>
-    {% for r in previewRescates %}
-    <a class="masonry-item" href="{{ r.url }}">
-      <img src="{{ r.data.image }}" alt="{{ r.data.title }}" loading="lazy">
-      <span class="masonry-caption">{{ r.data.title }}</span>
-    </a>
-    {% endfor %}
+  <p class="section-intro">Notas sobre películas y figuras que la memoria oficial dejó afuera, con material fotográfico de época.</p>
+  <div class="contact-sheet">
+    <div class="strip">
+      {% for r in previewRescates %}
+      <article class="frame" data-reveal>
+        <div class="sprockets"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="frame-still" data-tag="{{ r.data.epoca }}" style="{% if r.data.image %}background-image:url('{{ r.data.image }}');background-size:cover;background-position:center;{% endif %}"></div>
+        <div class="frame-body">
+          <div class="frame-cat">{{ r.data.epoca }}{% if r.data.fotografo %} · {{ r.data.fotografo }}{% endif %}</div>
+          <h3 class="frame-title"><a href="{{ r.url }}">{{ r.data.title }}</a></h3>
+          <p class="frame-excerpt">{{ r.data.excerpt }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
   </div>
-  <p style="margin:0 0 60px;"><a class="btn ghost" href="/rescates/">Ver el archivo completo</a></p>
+  <p style="margin:0 0 60px;"><a class="btn ghost" href="/rescates/">Ver todos los Rescates</a></p>
   {% endif %}
 
 </main>

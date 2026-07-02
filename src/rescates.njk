@@ -6,16 +6,24 @@ permalink: /rescates/
 <main class="wrap">
   <div class="section-head" data-reveal>
     <h2>Rescates</h2>
-    <span class="tc">{{ collections.rescates.length }} piezas de archivo</span>
+    <span class="tc">{{ collections.rescates.length }} publicados</span>
   </div>
-  <p class="section-intro">Archivo fotográfico de la época dorada del cine nacional. Material de exposición, no de consumo rápido.</p>
+  <p class="section-intro">Notas sobre películas, figuras y archivos del cine argentino que la memoria oficial dejó afuera, acompañadas de material fotográfico de época.</p>
 
-  <div class="masonry">
-    {% for r in collections.rescates %}
-    <a class="masonry-item" href="{{ r.url }}" data-reveal>
-      <img src="{{ r.data.image }}" alt="{{ r.data.title }}" loading="lazy">
-      <span class="masonry-caption">{{ r.data.title }}</span>
-    </a>
-    {% endfor %}
+  <div class="contact-sheet">
+    <div class="strip">
+      {% for r in collections.rescates %}
+      <article class="frame" data-reveal>
+        <div class="sprockets"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="frame-still" data-tag="{{ r.data.epoca }}" style="{% if r.data.image %}background-image:url('{{ r.data.image }}');background-size:cover;background-position:center;{% endif %}"></div>
+        <div class="frame-body">
+          <div class="frame-cat">{{ r.data.epoca }}{% if r.data.fotografo %} · {{ r.data.fotografo }}{% endif %}</div>
+          <h3 class="frame-title"><a href="{{ r.url }}">{{ r.data.title }}</a></h3>
+          <p class="frame-excerpt">{{ r.data.excerpt }}</p>
+          <div class="frame-foot"><span>{{ r.date | readableDate }}</span></div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
   </div>
 </main>

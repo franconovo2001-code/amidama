@@ -3,13 +3,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy({ "src/icons": "/" });
 
   eleventyConfig.addCollection("resenas", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/resenas/*.md").reverse();
   });
 
   eleventyConfig.addCollection("planoDelDia", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/plano-del-dia/*.md").reverse();
+    return collectionApi.getFilteredByGlob("src/el-plano/*.md").reverse();
   });
 
   eleventyConfig.addCollection("rescates", function (collectionApi) {

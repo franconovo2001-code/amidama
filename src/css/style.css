@@ -498,21 +498,15 @@
   text-transform: uppercase;
 }
 
-/* ---------- FICHA TÉCNICA ---------- */
-.ficha-tecnica{
+/* ---------- TECH LINE (detalle chico, no protagonista) ---------- */
+.tech-line{
   font-family:'Space Mono', monospace;
-  font-size: 13px;
-  border-top: 1px solid var(--line);
-  padding-top: 16px;
+  font-size: 12.5px;
+  color: var(--paper-dim);
+  letter-spacing: 0.01em;
+  margin: 4px 0 18px;
+  line-height: 1.6;
 }
-.ficha-tecnica > div{
-  display:flex; justify-content:space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--line);
-  gap: 16px;
-}
-.ficha-tecnica dt{ color: var(--paper-dim); }
-.ficha-tecnica dd{ color: var(--paper); text-align: right; }
 
 /* ---------- REVIEW HERO ---------- */
 .review-hero{ padding: 46px 0 20px; border-bottom: 1px solid var(--line); }
