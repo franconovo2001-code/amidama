@@ -17,4 +17,4 @@ Reseña de ejemplo. Reemplazar por texto real desde `/admin` o editando este arc
 
 ## Cámara
 
-Análisis técnico del movimiento de cámara y la relación con el espacio narrativo.
+Cómo el movimiento de cámara se relaciona con el espacio narrativo.

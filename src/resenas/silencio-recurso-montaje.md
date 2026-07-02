@@ -17,7 +17,7 @@ Reseña de ejemplo. Reemplazar por texto real desde `/admin` o editando este arc
 
 ## Fotografía
 
-Acá va el análisis técnico de la iluminación y la puesta de cámara.
+Acá va la lectura de la iluminación y la puesta de cámara.
 
 ## Montaje
 
