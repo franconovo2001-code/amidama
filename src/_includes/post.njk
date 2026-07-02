@@ -1,0 +1,26 @@
+---
+layout: base.njk
+---
+<section class="hero">
+  <div class="hero-frame" style="min-height:52vh;{% if cover %}background-image:linear-gradient(180deg, rgba(16,14,12,0.35), rgba(16,14,12,0.9)), url('{{ cover }}');background-size:cover;background-position:center;{% endif %}">
+    <div class="light-sweep"></div>
+    <div class="wrap hero-content">
+      <div class="hero-eyebrow">{{ category }}</div>
+      <h1 class="hero-title">{{ title }}</h1>
+      <div class="hero-meta">{{ page.date | readableDate }} — {{ author or "Franco" }} · Lectura {{ readTime or "5′" }}</div>
+    </div>
+  </div>
+  <div class="title-band">
+    <div class="wrap">
+      <span>Amidama</span>
+      <span class="sub">Cine en contraluz — Buenos Aires</span>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <article class="post-body">
+    {{ content | safe }}
+  </article>
+  <p style="margin:60px 0 40px;"><a href="/" style="font-family:'Space Mono',monospace;font-size:12px;color:var(--ember);letter-spacing:.05em;">← Volver a notas</a></p>
+</main>

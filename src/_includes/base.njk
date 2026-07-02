@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title or "Amidama — Cine en contraluz" }}</title>
+<meta name="description" content="{{ description or 'Amidama — crítica, ensayos y rescates de cine desde Buenos Aires.' }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Literata:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&family=Bitter:wght@700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a href="/" class="logo">Amidama</a>
+    <nav class="primary">
+      <ul>
+        <li><a href="/">Notas</a></li>
+        <li><a href="/#rescates">Rescates</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+{{ content | safe }}
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">Amidama</div>
+        <p class="foot-note">Cine visto en contraluz, desde Buenos Aires.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Secciones</h4>
+          <a href="/">Notas</a>
+          <a href="/#rescates">Rescates</a>
+          <a href="/sobre/">Sobre</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contacto</h4>
+          <p>Dirección editorial: Franco [Apellido]</p>
+          <a href="mailto:hola@amidama.com">hola@amidama.com</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© {{ currentYear }} AMIDAMA — Buenos Aires</span>
+      <span>Medio digital independiente de crítica y ensayo cinematográfico</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

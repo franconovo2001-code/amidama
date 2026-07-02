@@ -1,0 +1,15 @@
+{
+  "name": "amidama",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

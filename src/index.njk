@@ -1,0 +1,64 @@
+---
+layout: base.njk
+title: Amidama — Cine en contraluz
+---
+{% set latest = collections.posts[0] %}
+{% set rest = collections.posts | slice(1, 7) %}
+
+<section class="hero">
+  <div class="hero-frame">
+    <div class="light-sweep"></div>
+    <div class="wrap hero-content">
+      {% if latest %}
+      <div class="hero-eyebrow">Nota destacada · {{ latest.data.category }}</div>
+      <h1 class="hero-title"><a href="{{ latest.url }}">{{ latest.data.title }}</a></h1>
+      <p class="hero-dek">{{ latest.data.excerpt }}</p>
+      <div class="hero-meta">{{ latest.date | readableDate }} — {{ latest.data.author or "Franco" }}</div>
+      {% else %}
+      <div class="hero-eyebrow">Todavía no hay notas publicadas</div>
+      <h1 class="hero-title">Escribí tu primera nota desde /admin</h1>
+      <p class="hero-dek">En cuanto publiques algo desde el panel, va a aparecer acá como nota destacada.</p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="title-band">
+    <div class="wrap">
+      <span>Amidama</span>
+      <span class="sub">Cine en contraluz — Buenos Aires</span>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <div class="section-head">
+    <h2>Últimas notas</h2>
+    <span class="tc">{{ collections.posts.length }} publicadas</span>
+  </div>
+
+  <div class="contact-sheet">
+    <div class="strip">
+      {% for post in rest %}
+      <article class="frame">
+        <div class="sprockets"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="frame-still" data-tag="{{ post.data.category }}" style="{% if post.data.cover %}background-image:url('{{ post.data.cover }}');background-size:cover;background-position:center;{% endif %}"></div>
+        <div class="frame-body">
+          <div class="frame-cat">{{ post.data.category }}</div>
+          <h3 class="frame-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <p class="frame-excerpt">{{ post.data.excerpt }}</p>
+          <div class="frame-foot"><span>{{ post.date | readableDate }}</span><span>{{ post.data.readTime or "5′" }}</span></div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="rescates" id="rescates">
+    <span class="tag">Sección fija</span>
+    <div>
+      <h3>Cine Rescatado</h3>
+      <p>Una serie continua sobre películas, figuras y archivos del cine argentino que la memoria oficial dejó afuera. Etiquetá una nota con la categoría "Rescates" desde el panel y va a sumarse acá.</p>
+    </div>
+  </div>
+
+</main>

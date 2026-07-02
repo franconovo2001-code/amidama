@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Notas"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - label: "Categoría"
+        name: "category"
+        widget: "select"
+        options: ["Crítica", "Ensayos", "Rescates", "Fotografía"]
+      - { label: "Bajada / resumen (aparece en la tira de notas)", name: "excerpt", widget: "text" }
+      - { label: "Imagen de portada", name: "cover", widget: "image", required: false }
+      - { label: "Tiempo de lectura", name: "readTime", widget: "string", default: "5′", required: false }
+      - { label: "Autor", name: "author", widget: "string", default: "Franco" }
+      - { label: "Cuerpo de la nota", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk" }
