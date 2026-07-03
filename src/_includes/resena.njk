@@ -4,7 +4,7 @@ layout: base.njk
 <section class="review-hero" data-reveal>
   <div class="wrap">
     <div class="review-hero-grid">
-      <div class="review-cover" style="{% if cover %}background-image:url('{{ cover }}');{% endif %}"></div>
+      <div class="review-cover" style="{% if cover %}background-image:url('{{ cover | url }}');{% endif %}"></div>
       <div class="review-meta-col">
         <div class="hero-eyebrow">Reseña</div>
         <h1 class="review-title">{{ title }}</h1>
@@ -27,5 +27,5 @@ layout: base.njk
   <article class="post-body" data-reveal>
     {{ content | safe }}
   </article>
-  <p class="back-link"><a href="/resenas/">← Volver a reseñas</a></p>
+  <p class="back-link"><a href="{{ '/resenas/' | url }}">← Volver a reseñas</a></p>
 </main>

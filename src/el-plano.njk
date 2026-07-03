@@ -12,7 +12,7 @@ permalink: /el-plano/
 
   <div class="plano-grid">
     {% for p in collections.planoDelDia %}
-    <a class="plano-thumb" href="{{ p.url }}" data-reveal style="{% if p.data.image %}background-image:url('{{ p.data.image }}');{% endif %}">
+    <a class="plano-thumb" href="{{ p.url | url }}" data-reveal style="{% if p.data.image %}background-image:url('{{ p.data.image | url }}');{% endif %}">
       <span class="plano-thumb-label">{{ p.data.title }}</span>
     </a>
     {% endfor %}

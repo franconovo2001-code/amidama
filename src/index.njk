@@ -5,8 +5,8 @@ title: Amidama — Apuntes de cine y memoria
 {% set latestResena = collections.resenas[0] %}
 {% set latestPlano = collections.planoDelDia[0] %}
 {% set latestRescate = collections.rescates[0] %}
-{% set restoResenas = collections.resenas | slice(1, 5) %}
-{% set previewRescates = collections.rescates | slice(0, 4) %}
+{% set restoResenas = collections.resenas | sliceItems(1, 5) %}
+{% set previewRescates = collections.rescates | sliceItems(0, 4) %}
 
 <section class="hero">
   <div class="hero-frame">
@@ -16,9 +16,9 @@ title: Amidama — Apuntes de cine y memoria
       <h1 class="hero-title">Apuntes de cine y memoria<br>Honrar lo que siempre estuvo</h1>
       <p class="hero-dek">Reseñas, notas sobre cine argentino y rescate de figuras que la memoria oficial dejó afuera. Sin relleno ni vueltas.</p>
       <div class="cta-row">
-        <a class="btn" href="/resenas/">Leer las reseñas</a>
-        {% if latestPlano %}<a class="btn ghost" href="{{ latestPlano.url }}">Ver el plano</a>{% endif %}
-        <a class="btn ghost" href="/rescates/">Ir a Rescates</a>
+        <a class="btn" href="{{ '/resenas/' | url }}">Leer las reseñas</a>
+        {% if latestPlano %}<a class="btn ghost" href="{{ latestPlano.url | url }}">Ver el plano</a>{% endif %}
+        <a class="btn ghost" href="{{ '/rescates/' | url }}">Ir a Rescates</a>
       </div>
     </div>
   </div>
@@ -39,21 +39,21 @@ title: Amidama — Apuntes de cine y memoria
   </div>
   <div class="featured-strip" data-reveal>
     {% if latestResena %}
-    <a class="featured-card" href="{{ latestResena.url }}" style="{% if latestResena.data.cover %}background-image:linear-gradient(180deg, rgba(16,14,12,0.15), rgba(16,14,12,0.92)), url('{{ latestResena.data.cover }}');background-size:cover;background-position:center;{% endif %}">
+    <a class="featured-card" href="{{ latestResena.url | url }}" style="{% if latestResena.data.cover %}background-image:linear-gradient(180deg, rgba(16,14,12,0.15), rgba(16,14,12,0.92)), url('{{ latestResena.data.cover | url }}');background-size:cover;background-position:center;{% endif %}">
       <div class="fc-tag">Última reseña · {{ latestResena.data.rating }}</div>
       <h3>{{ latestResena.data.title }}</h3>
       <p>{{ latestResena.data.director }} — {{ latestResena.data.anio }}</p>
     </a>
     {% endif %}
     {% if latestPlano %}
-    <a class="featured-card" href="{{ latestPlano.url }}" style="{% if latestPlano.data.image %}background-image:linear-gradient(180deg, rgba(16,14,12,0.15), rgba(16,14,12,0.92)), url('{{ latestPlano.data.image }}');background-size:cover;background-position:center;{% endif %}">
+    <a class="featured-card" href="{{ latestPlano.url | url }}" style="{% if latestPlano.data.image %}background-image:linear-gradient(180deg, rgba(16,14,12,0.15), rgba(16,14,12,0.92)), url('{{ latestPlano.data.image | url }}');background-size:cover;background-position:center;{% endif %}">
       <div class="fc-tag">El Plano</div>
       <h3>{{ latestPlano.data.title }}</h3>
       <p>{{ latestPlano.data.pelicula }}</p>
     </a>
     {% endif %}
     {% if latestRescate %}
-    <a class="featured-card" href="{{ latestRescate.url }}" style="{% if latestRescate.data.image %}background-image:linear-gradient(180deg, rgba(16,14,12,0.15), rgba(16,14,12,0.92)), url('{{ latestRescate.data.image }}');background-size:cover;background-position:center;{% endif %}">
+    <a class="featured-card" href="{{ latestRescate.url | url }}" style="{% if latestRescate.data.image %}background-image:linear-gradient(180deg, rgba(16,14,12,0.15), rgba(16,14,12,0.92)), url('{{ latestRescate.data.image | url }}');background-size:cover;background-position:center;{% endif %}">
       <div class="fc-tag">Rescates · {{ latestRescate.data.epoca }}</div>
       <h3>{{ latestRescate.data.title }}</h3>
       <p>{{ latestRescate.data.excerpt | truncate(70) }}</p>
@@ -72,10 +72,10 @@ title: Amidama — Apuntes de cine y memoria
       {% for post in restoResenas %}
       <article class="frame" data-reveal>
         <div class="sprockets"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-        <div class="frame-still" data-tag="{{ post.data.pais }}" style="{% if post.data.cover %}background-image:url('{{ post.data.cover }}');background-size:cover;background-position:center;{% endif %}"></div>
+        <div class="frame-still" data-tag="{{ post.data.pais }}" style="{% if post.data.cover %}background-image:url('{{ post.data.cover | url }}');background-size:cover;background-position:center;{% endif %}"></div>
         <div class="frame-body">
           <div class="frame-cat">{{ post.data.director }}{% if post.data.anio %} · {{ post.data.anio }}{% endif %}</div>
-          <h3 class="frame-title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <h3 class="frame-title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
           <p class="frame-excerpt">{{ post.data.excerpt }}</p>
           <div class="frame-foot">
             <span class="mini-rating">{{ post.data.rating }}</span>
@@ -86,7 +86,7 @@ title: Amidama — Apuntes de cine y memoria
       {% endfor %}
     </div>
   </div>
-  <p style="margin:20px 0 60px;"><a class="btn ghost" href="/resenas/">Ver todas las reseñas</a></p>
+  <p style="margin:20px 0 60px;"><a class="btn ghost" href="{{ '/resenas/' | url }}">Ver todas las reseñas</a></p>
 
   {% if previewRescates.length %}
   <div class="section-head" data-reveal>
@@ -99,17 +99,17 @@ title: Amidama — Apuntes de cine y memoria
       {% for r in previewRescates %}
       <article class="frame frame-vintage" data-reveal>
         <div class="sprockets"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-        <div class="frame-still" data-tag="{{ r.data.epoca }}" style="{% if r.data.image %}background-image:url('{{ r.data.image }}');background-size:cover;background-position:center;{% endif %}"></div>
+        <div class="frame-still" data-tag="{{ r.data.epoca }}" style="{% if r.data.image %}background-image:url('{{ r.data.image | url }}');background-size:cover;background-position:center;{% endif %}"></div>
         <div class="frame-body">
           <div class="frame-cat">{{ r.data.epoca }}{% if r.data.fotografo %} · {{ r.data.fotografo }}{% endif %}</div>
-          <h3 class="frame-title"><a href="{{ r.url }}">{{ r.data.title }}</a></h3>
+          <h3 class="frame-title"><a href="{{ r.url | url }}">{{ r.data.title }}</a></h3>
           <p class="frame-excerpt">{{ r.data.excerpt }}</p>
         </div>
       </article>
       {% endfor %}
     </div>
   </div>
-  <p style="margin:0 0 60px;"><a class="btn ghost" href="/rescates/">Ver todos los Rescates</a></p>
+  <p style="margin:0 0 60px;"><a class="btn ghost" href="{{ '/rescates/' | url }}">Ver todos los Rescates</a></p>
   {% endif %}
 
 </main>

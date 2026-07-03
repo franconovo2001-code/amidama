@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 <section class="plano-lightbox" data-reveal>
-  <div class="plano-image" style="{% if image %}background-image:url('{{ image }}');{% endif %}"></div>
+  <div class="plano-image" style="{% if image %}background-image:url('{{ image | url }}');{% endif %}"></div>
   <div class="plano-panel">
     <div class="hero-eyebrow">El Plano</div>
     <h1 class="plano-title">{{ title }}</h1>
@@ -11,6 +11,6 @@ layout: base.njk
       {{ content | safe }}
     </div>
     <div class="hero-meta">{{ page.date | readableDate }}</div>
-    <p class="back-link"><a href="/el-plano/">← Volver a El Plano</a></p>
+    <p class="back-link"><a href="{{ '/el-plano/' | url }}">← Volver a El Plano</a></p>
   </div>
 </section>

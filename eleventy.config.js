@@ -25,6 +25,11 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Nombre propio para evitar el choque con el "slice" de agrupar de Nunjucks
+  eleventyConfig.addFilter("sliceItems", (arr, start, end) => {
+    return Array.isArray(arr) ? arr.slice(start, end) : [];
+  });
+
   // Texto y clase visual para el sistema de calificación Luz / Contraluz / Sombra
   eleventyConfig.addFilter("ratingIndex", (rating) => {
     const scale = { luz: 3, contraluz: 2, sombra: 1 };
