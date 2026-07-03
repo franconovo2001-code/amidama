@@ -6,12 +6,12 @@ director: "Nombre Apellido"
 dp: "Nombre Apellido"
 pais: "Argentina"
 anio: 2025
+image: "/images/obse.jpg"
 camara: "Digital, Super 35"
 rating: Luz
 excerpt: "Plano secuencia sostenido durante los primeros doce minutos sin corte."
 readTime: 5′
 author: Franco
-image: "/images/obse.jpg"
 ---
 
 Reseña de ejemplo. Reemplazar por texto real desde `/admin` o editando este archivo.
