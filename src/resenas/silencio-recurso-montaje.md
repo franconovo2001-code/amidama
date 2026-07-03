@@ -28,3 +28,4 @@ La fotografía, uno de los aspectos destacados del filme, conforma una belleza d
 
 Una película repleta de elegantes detalles y una historia conmovedora, logra profundizar la soledad desde la bondad. Mediante el uso del silencio, las pausas y el susurro se retrata la emotividad más intensa y conmovedora de la trama. A través de miradas y comprensiones mutuas, los personajes logran conectarse y llenar los vacíos de sus vidas desde ambos puntos de vista.
 
+ <div class="foto-card"><img src="/images/The_Quiet_Girl_46.jpg" alt="Catherine Clinch" /><div class="foto-overlay"><span class="foto-label">Catherine Clinch</span></div></div>
