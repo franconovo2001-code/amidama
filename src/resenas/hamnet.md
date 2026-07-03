@@ -10,7 +10,7 @@ rating: Luz
 excerpt: "Una o dos líneas de resumen"
 readTime: 5′
 author: Franco
-cover: "/images/obse.jpg"
+cover: "/images/hamnet.webp"
 ---
 
 Acá escribís el cuerpo de la reseña.
