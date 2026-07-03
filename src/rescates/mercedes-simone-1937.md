@@ -5,7 +5,7 @@ date: 2026-06-15
 epoca: "Década de 1930"
 fotografo: "Archivo Radiolandia"
 excerpt: "Una entrevista radial de 1937 es, hoy, uno de los pocos registros directos de una voz que el canon del tango dejó afuera."
-image: "src/images/mercedes simone.jpg"
+image: "/images/mercedes simone.jpg"
 ---
 
 Nota de ejemplo. Reemplazar por el texto real desde `/admin` o editando este archivo.
