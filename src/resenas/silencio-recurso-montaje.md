@@ -9,8 +9,8 @@ anio: 2022
 camara: "Digital (Sony Venice), relación 1.37:1"
 rating: Contraluz
 excerpt: "Un análisis de la ópera prima de Colm Bairéad, donde la falta de palabras deja de ser un vacío para convertirse en el principal vehículo emocional. A través de una íntima fotografía en formato 1.37:1 (Academy), la película encuadra la soledad y el cauteloso despertar de una niña que descubre el afecto."
-image: "/images/The_Quiet_Girl_46.jpg"
 author: Franco Novo
+cover: "/images/The_Quiet_Girl_46.jpg"
 ---
 ## The Quiet Girl : La perla escondida en los Premios Oscar
 
