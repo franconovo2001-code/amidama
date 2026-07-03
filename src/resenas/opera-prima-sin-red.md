@@ -2,8 +2,8 @@
 layout: resena.njk
 title: "OBSESSION - El cine de terror está mas vivo que nunca"
 date: 2026-06-27
-director: "Nombre Apellido"
-dp: "Nombre Apellido"
+director: "por PELICULONA"
+dp: "por PELICULONA"
 pais: "Argentina"
 anio: 2025
 image: "/images/obse.jpg"
