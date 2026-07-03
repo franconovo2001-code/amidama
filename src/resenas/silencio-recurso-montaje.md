@@ -9,7 +9,8 @@ anio: 2022
 camara: "Digital (Sony Venice), relación 1.37:1"
 rating: Contraluz
 excerpt: "Un análisis de la ópera prima de Colm Bairéad, donde la falta de palabras deja de ser un vacío para convertirse en el principal vehículo emocional. A través de una íntima fotografía en formato 1.37:1 (Academy), la película encuadra la soledad y el cauteloso despertar de una niña que descubre el afecto."
-author: Franco
+image: "/images/The_Quiet_Girl_46.jpg"
+author: Franco Novo
 ---
 ## The Quiet Girl : La perla escondida en los Premios Oscar
 
@@ -27,5 +28,3 @@ Aquí se presentan protagonistas que optan por el silencio, por reprimir sus sen
 La fotografía, uno de los aspectos destacados del filme, conforma una belleza desde la tranquilidad y la quietud, tiene la pureza cromática y la precisión exacta para retratar la desafortunada existencia de la joven. 
 
 Una película repleta de elegantes detalles y una historia conmovedora, logra profundizar la soledad desde la bondad. Mediante el uso del silencio, las pausas y el susurro se retrata la emotividad más intensa y conmovedora de la trama. A través de miradas y comprensiones mutuas, los personajes logran conectarse y llenar los vacíos de sus vidas desde ambos puntos de vista.
-
- <div class="foto-card"><img src="/images/The_Quiet_Girl_46.jpg" alt="Catherine Clinch" /><div class="foto-overlay"><span class="foto-label">Catherine Clinch</span></div></div>
