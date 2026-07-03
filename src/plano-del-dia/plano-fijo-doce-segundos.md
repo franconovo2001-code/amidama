@@ -5,7 +5,7 @@ date: 2026-06-30
 pelicula: "Ghost Story"
 director: "Nombre Apellido"
 anio: 2024
-image: "src/images/obse.jpg"
+image: "/images/ghost.jpg"
 ---
 
 Análisis breve del encuadre: distancia focal, composición y por qué sostiene el plano sin corte.
