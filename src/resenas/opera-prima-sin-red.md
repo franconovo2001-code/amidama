@@ -1,6 +1,6 @@
 ---
 layout: resena.njk
-title: "Ópera prima sin red de contención"
+title: "OBSESSION - El cine de terror está mas vivo que nunca"
 date: 2026-06-27
 director: "Nombre Apellido"
 dp: "Nombre Apellido"
