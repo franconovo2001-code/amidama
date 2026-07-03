@@ -13,7 +13,7 @@ permalink: /rescates/
   <div class="contact-sheet">
     <div class="strip">
       {% for r in collections.rescates %}
-      <article class="frame" data-reveal>
+      <article class="frame frame-vintage" data-reveal>
         <div class="sprockets"><span></span><span></span><span></span><span></span><span></span><span></span></div>
         <div class="frame-still" data-tag="{{ r.data.epoca }}" style="{% if r.data.image %}background-image:url('{{ r.data.image }}');background-size:cover;background-position:center;{% endif %}"></div>
         <div class="frame-body">

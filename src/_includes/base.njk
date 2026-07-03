@@ -4,12 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ title or "Amidama — Apuntes de cine y memoria" }}</title>
-<meta name="description" content="{{ description or 'Amidama. Reseñas y notas sobre cine argentino. Memoria. Buenos Aires.' }}">
+<meta name="description" content="{{ description or 'Amidama. Reseñas y notas sobre cine argentino. Memoria, no relleno. Buenos Aires.' }}">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Amidama">
+<meta property="og:title" content="{{ title or 'Amidama — Apuntes de cine y memoria' }}">
+<meta property="og:description" content="{{ description or 'Amidama. Reseñas y notas sobre cine argentino. Memoria, no relleno. Buenos Aires.' }}">
+<meta property="og:image" content="https://amidama.netlify.app/og-image.png">
+<meta property="og:url" content="https://amidama.netlify.app{{ page.url }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title or 'Amidama — Apuntes de cine y memoria' }}">
+<meta name="twitter:description" content="{{ description or 'Amidama. Reseñas y notas sobre cine argentino. Memoria, no relleno. Buenos Aires.' }}">
+<meta name="twitter:image" content="https://amidama.netlify.app/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Literata:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&family=Bitter:wght@700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">

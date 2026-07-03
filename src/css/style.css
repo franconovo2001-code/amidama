@@ -124,14 +124,17 @@
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--ember);
+    color: var(--paper);
     margin-bottom: 18px;
-    display:flex; align-items:center; gap: 10px;
+    display:inline-flex; align-items:center; gap: 10px;
+    background: rgba(16,14,12,0.55);
+    padding: 7px 12px;
+    border: 1px solid rgba(217,165,68,0.35);
   }
   .hero-eyebrow::before{
     content:"";
-    width: 22px; height: 1px;
-    background: var(--ember);
+    width: 16px; height: 1px;
+    background: var(--gold);
     display:inline-block;
   }
   h1.hero-title{
@@ -658,3 +661,10 @@
 @media (max-width: 860px){
   .featured-strip{ grid-template-columns: 1fr; }
 }
+
+/* ---------- RESCATES — TRATAMIENTO ÉPOCA DORADA ---------- */
+.frame-vintage .frame-still{
+  filter: sepia(0.5) contrast(1.06) brightness(0.9) saturate(0.8);
+  box-shadow: 0 0 0 1px var(--line), 0 0 0 5px var(--surface), 0 0 0 6px var(--line);
+}
+.frame-vintage .frame-cat{ font-style: italic; }

@@ -14,7 +14,7 @@ title: Amidama — Apuntes de cine y memoria
     <div class="wrap hero-content">
       <div class="hero-eyebrow">Medio digital independiente — Buenos Aires</div>
       <h1 class="hero-title">Apuntes de cine y memoria<br>Honrar lo que siempre estuvo</h1>
-      <p class="hero-dek">Reseñas de actualidad, notas sobre cine argentino y rescate de figuras que la memoria oficial dejó afuera.</p>
+      <p class="hero-dek">Reseñas, notas sobre cine argentino y rescate de figuras que la memoria oficial dejó afuera. Sin relleno ni vueltas.</p>
       <div class="cta-row">
         <a class="btn" href="/resenas/">Leer las reseñas</a>
         {% if latestPlano %}<a class="btn ghost" href="{{ latestPlano.url }}">Ver el plano</a>{% endif %}
@@ -25,7 +25,7 @@ title: Amidama — Apuntes de cine y memoria
   <div class="title-band">
     <div class="wrap">
       <span>Amidama</span>
-      <span class="sub">Apuntes de cine y archivo— Buenos Aires</span>
+      <span class="sub">Apuntes de cine y memoria — Buenos Aires</span>
     </div>
   </div>
 </section>
@@ -97,7 +97,7 @@ title: Amidama — Apuntes de cine y memoria
   <div class="contact-sheet">
     <div class="strip">
       {% for r in previewRescates %}
-      <article class="frame" data-reveal>
+      <article class="frame frame-vintage" data-reveal>
         <div class="sprockets"><span></span><span></span><span></span><span></span><span></span><span></span></div>
         <div class="frame-still" data-tag="{{ r.data.epoca }}" style="{% if r.data.image %}background-image:url('{{ r.data.image }}');background-size:cover;background-position:center;{% endif %}"></div>
         <div class="frame-body">
