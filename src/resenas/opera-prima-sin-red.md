@@ -11,7 +11,7 @@ rating: Luz
 excerpt: "Plano secuencia sostenido durante los primeros doce minutos sin corte."
 readTime: 5′
 author: Franco
-image: "src/images/obse.jpg"
+image: "/images/obse.jpg"
 ---
 
 Reseña de ejemplo. Reemplazar por texto real desde `/admin` o editando este archivo.
