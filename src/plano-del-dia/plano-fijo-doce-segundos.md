@@ -1,8 +1,8 @@
 ---
 layout: plano.njk
-title: "El plano fijo de los doce segundos"
+title: "Ghost Story - Un Plano"
 date: 2026-06-30
-pelicula: "Título de la película"
+pelicula: "Ghost Story"
 director: "Nombre Apellido"
 anio: 2024
 image: "src/images/obse.jpg"
